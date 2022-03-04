@@ -21,6 +21,7 @@
 
 <script>
 import SurveyResult from './SurveyResult.vue';
+//import axios from 'axios';
 
 export default {
   components: {
@@ -34,12 +35,13 @@ export default {
   methods:{
     loadExperiences() {
       fetch('https://vue-http-demo-b99c4-default-rtdb.firebaseio.com/surveys.json')
+      //axios.get('https://vue-http-demo-b99c4-default-rtdb.firebaseio.com/surveys.json')
       .then((response) => {
         if(response.ok) {
           return response.json();
         }
-      }
-      ).then((data) => {
+      })
+      .then((data) => {
         const results = [];
         for (const id in data) {
           results.push({ 

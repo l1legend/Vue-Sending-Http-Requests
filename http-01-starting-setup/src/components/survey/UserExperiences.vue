@@ -54,7 +54,16 @@ export default {
       });
     },
   },
+  mounted() {
+    this.loadExperiences();
+  }
 };
+
+  // mounted(){
+  //   axios.get('https://vue-http-demo-b99c4-default-rtdb.firebaseio.com/surveys.json').then(response => {      
+  //     this.results = response.data;
+  //   })
+  // },
 
 </script>
 

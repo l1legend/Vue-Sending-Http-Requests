@@ -35,7 +35,6 @@ export default {
   methods: {
     loadExperiences() {
       //fetch('https://vue-http-demo-b99c4-default-rtdb.firebaseio.com/surveys.json')
-      //axios.get('https://vue-http-demo-b99c4-default-rtdb.firebaseio.com/surveys.json')
       // .then((response) => {
       //   if(response.ok) {
       //     return response.json();
@@ -55,12 +54,12 @@ export default {
       axios
         .get('https://vue-http-demo-b99c4-default-rtdb.firebaseio.com/surveys.json')
           .then(({ data }) => {
-            this.results = Object.entries(data).map(([id, { name, rating }]) => ({ id, name, rating, }));
+            this.results = Object.entries(data).map(([id, { name, rating }]) => ({ id, name, rating }));
         });
     },
   },
   mounted() {
-    //this.loadExperiences();
+    this.loadExperiences();
   },
 };
 

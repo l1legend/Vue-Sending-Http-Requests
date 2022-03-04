@@ -60,6 +60,8 @@ export default {
         rating: this.chosenRating,
       });
 
+      fetch('https://vue-http-demo-b99c4-default-rtdb.firebaseio.com/');
+
       this.enteredName = '';
       this.chosenRating = null;
     },

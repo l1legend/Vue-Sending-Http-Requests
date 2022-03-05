@@ -8,6 +8,7 @@
         >
       </div>
       <p v-if="isLoading">Loading...</p>
+      <p v-else-if="!isLoading && (!results || results.length === 0)">No survey experiences found. Starting adding some survey results first.</p>
       <ul v-else>
         <survey-result
           v-for="result in results"
@@ -36,7 +37,8 @@ export default {
   },
   methods: {
     loadExperiences() {
-      //fetch('https://vue-http-demo-b99c4-default-rtdb.firebaseio.com/surveys.json')
+      // fetch('https://vue-http-demo-b99c4-default-rtdb.firebaseio.com/surveys.json')
+      // this.isLoading = false;
       // .then((response) => {
       //   if(response.ok) {
       //     return response.json();

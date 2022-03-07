@@ -75,7 +75,7 @@ export default {
       //     }),
       // });
       this.error = null;
-      axios.post('https://vue-http-demo-b99c4-default-rtdb.firebaseio.com/surveys.jso', {
+      axios.post('https://vue-http-demo-b99c4-default-rtdb.firebaseio.com/surveys.json', {
           name: this.enteredName,
           rating: this.chosenRating,
         })
